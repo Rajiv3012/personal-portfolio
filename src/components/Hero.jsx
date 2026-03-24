@@ -60,53 +60,57 @@ const Hero = () => {
       ))}
 
       <div className="hero-container">
-        {/* Avatar */}
-        <div className="avatar-wrapper slide-in d1">
-          <div className="avatar-ring">
-            <div className="avatar-image-container">
-              <img src="/pfp_custom - Copy.png" alt="Rajiv Kumar Singh" className="avatar-img" />
+        <div className="hero-left">
+          <h1 className="hero-name slide-in d2">
+            Rajiv Kumar Singh
+          </h1>
+
+          <div className="hero-typing slide-in d3">
+            <span>{displayText}</span>
+            <span className="cursor-blink" />
+          </div>
+
+          <div className="hero-bio slide-in d4">
+            <p>
+              CSE undergrad at LPU crafting scalable, user-centric MERN applications.
+              I bridge clean architecture with thoughtful design to ship experiences that actually matter.
+            </p>
+            <p>
+              Competitive programmer turned product builder — algorithmic precision meets user-first thinking in every line I write.
+            </p>
+          </div>
+
+          <div className="hero-goal slide-in d5">
+            <p>🎯 Seeking a role where I can engineer impactful solutions, grow with a strong team, and build products that scale and create real-world value.</p>
+          </div>
+
+          <div className="hero-socials slide-in d5">
+            <a href="https://www.linkedin.com/in/01rajiv/" target="_blank" rel="noreferrer" className="social-tag linkedin">
+              <b>in</b> LinkedIn
+            </a>
+            <a href="https://github.com/Rajiv3012" target="_blank" rel="noreferrer" className="social-tag github">
+              🐙 GitHub
+            </a>
+          </div>
+
+          <div className="hero-actions slide-in d6">
+            <Link to="projects" smooth={true} className="btn-primary">View My Work →</Link>
+            <Link to="contact" smooth={true} className="btn-secondary">Contact Me</Link>
+          </div>
+        </div>
+
+        <div className="hero-right">
+          {/* Avatar */}
+          <div className="avatar-wrapper slide-in d1">
+            <div className="avatar-ring">
+              <div className="avatar-image-container">
+                <img src="/pfp_custom - Copy.png" alt="Rajiv Kumar Singh" className="avatar-img" />
+              </div>
+            </div>
+            <div className="availability-badge">
+              <span className="availability-dot" />open to work
             </div>
           </div>
-          <div className="availability-badge">
-            <span className="availability-dot" />open to work
-          </div>
-        </div>
-
-        <h1 className="hero-name slide-in d2">
-          Rajiv Kumar Singh
-        </h1>
-
-        <div className="hero-typing slide-in d3">
-          <span>{displayText}</span>
-          <span className="cursor-blink" />
-        </div>
-
-        <div className="hero-bio slide-in d4">
-          <p>
-            CSE undergrad at LPU crafting scalable, user-centric MERN applications.
-            I bridge clean architecture with thoughtful design to ship experiences that actually matter.
-          </p>
-          <p>
-            Competitive programmer turned product builder — algorithmic precision meets user-first thinking in every line I write.
-          </p>
-        </div>
-
-        <div className="hero-goal slide-in d5">
-          <p>🎯 Seeking a role where I can engineer impactful solutions, grow with a strong team, and build products that scale and create real-world value.</p>
-        </div>
-
-        <div className="hero-socials slide-in d5">
-          <a href="https://www.linkedin.com/in/01rajiv/" target="_blank" rel="noreferrer" className="social-tag linkedin">
-            <b>in</b> LinkedIn
-          </a>
-          <a href="https://github.com/Rajiv3012" target="_blank" rel="noreferrer" className="social-tag github">
-            🐙 GitHub
-          </a>
-        </div>
-
-        <div className="hero-actions slide-in d6">
-          <Link to="projects" smooth={true} className="btn-primary">View My Work →</Link>
-          <Link to="contact" smooth={true} className="btn-secondary">Contact Me</Link>
         </div>
       </div>
 
@@ -149,15 +153,33 @@ const Hero = () => {
 
         .hero-container {
           display: flex;
-          flex-direction: column;
+          flex-direction: row;
           align-items: center;
-          textAlign: center;
+          justify-content: space-between;
+          text-align: left;
           position: relative;
           z-index: 1;
-          max-width: 820px;
+          width: 100%;
+          max-width: 1250px;
+          gap: 60px;
         }
 
-        .avatar-wrapper { position: relative; margin-bottom: 38px; }
+        .hero-left {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          max-width: 680px;
+        }
+
+        .hero-right {
+          flex-shrink: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .avatar-wrapper { position: relative; margin-bottom: 0px; }
         .avatar-ring {
           width: 320px; height: 320px;
           border-radius: 50%;
@@ -280,7 +302,7 @@ const Hero = () => {
           line-height: 1.6;
         }
 
-        .hero-socials { display: flex; gap: 11px; margin-bottom: 30px; flexWrap: wrap; justify-content: center; }
+        .hero-socials { display: flex; gap: 11px; margin-bottom: 32px; flexWrap: wrap; justify-content: flex-start; }
         .social-tag {
           display: flex; align-items: center; gap: 8px;
           padding: 9px 21px; border-radius: 9px;
@@ -307,9 +329,38 @@ const Hero = () => {
         }
         .btn-secondary:hover { border-color: var(--a1); color: var(--a1); transform: translateY(-2px); }
 
+        .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+
         .hero-scroll { marginTop: 58px; display: flex; flexDirection: column; alignItems: center; gap: 6px; }
         .scroll-text { fontFamily: 'JetBrains Mono', monospace; fontSize: .68rem; letterSpacing: 3px; textTransform: uppercase; color: var(--text-dim); }
         .scroll-line { width: 1.5px; height: 30px; background: linear-gradient(var(--a1), transparent); borderRadius: 2px; animation: scrollDrop 1.6s ease-in-out infinite; }
+
+        @media (max-width: 968px) {
+          .hero-container {
+            flex-direction: column-reverse;
+            text-align: center;
+            gap: 50px;
+            padding-top: 30px;
+          }
+          .hero-left {
+            align-items: center;
+            text-align: center;
+          }
+          .hero-goal {
+            text-align: center;
+            border-left: none;
+            padding-left: 0;
+            border-top: 2px solid rgba(0,255,179,0.15);
+            border-bottom: 2px solid rgba(0,255,179,0.15);
+            padding: 14px 0;
+          }
+          .hero-socials {
+            justify-content: center;
+          }
+          .hero-actions {
+            justify-content: center;
+          }
+        }
 
         .d1 { animation-delay: .15s } .d2 { animation-delay: .28s } .d3 { animation-delay: .4s }
         .d4 { animation-delay: .52s } .d5 { animation-delay: .64s } .d6 { animation-delay: .76s } .d7 { animation-delay: .88s }
