@@ -176,7 +176,7 @@ const CodingProfiles = () => {
               </div>
               <div className="cp-embed-body cp-heatmap-body">
                 <img
-                  src="https://github-contributions-api.deno.dev/Rajiv3012.svg?scheme=tokyonight"
+                  src="https://github-contributions-api.deno.dev/Rajiv3012.svg?scheme=cyan"
                   alt="GitHub Contribution Heatmap"
                   className="cp-embed-img cp-heatmap-img"
                   loading="lazy"
@@ -191,7 +191,7 @@ const CodingProfiles = () => {
                 </div>
                 <div className="cp-embed-body">
                   <img
-                    src="https://github-readme-stats.vercel.app/api?username=Rajiv3012&show_icons=true&theme=tokyonight&bg_color=0b1422&border_color=ffffff0e&title_color=00dcff&icon_color=7b5ff5&text_color=6b88a8&hide_border=false&border_radius=12&include_all_commits=true"
+                    src="https://github-readme-stats.vercel.app/api?username=Rajiv3012&show_icons=true&theme=tokyonight&bg_color=0b1422&border_color=ffffff0e&title_color=00dcff&icon_color=7b5ff5&text_color=6b88a8&hide_border=false&border_radius=12"
                     alt="GitHub Stats"
                     className="cp-embed-img"
                     loading="lazy"
