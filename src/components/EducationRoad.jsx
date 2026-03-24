@@ -3,7 +3,6 @@ import React from 'react';
 const EducationRoad = () => {
   const EDUCATION = [
     {yr:'Aug 2023–Present',inst:'Lovely Professional University',loc:'Punjab, India',deg:'B.Tech — Computer Science & Engineering',score:'CGPA: 7.31',i:'🎓',col:'#00dcff'},
-    {yr:'Jun–Jul 2025',inst:'W3 Grads',loc:'Online',deg:'Training: Advanced Data Structures & Algorithms (Java)',score:'Certified',i:'📚',col:'#00ffb3'},
     {yr:'Apr 2022–May 2023',inst:"DAV Public School",loc:'Ara Sarubera, Jharkhand',deg:'Intermediate (Class XII)',score:'69%',i:'🏫',col:'#7b5ff5'},
     {yr:'Apr 2020–May 2021',inst:"DAV Public School",loc:'Ara Sarubera, Jharkhand',deg:'Matriculation (Class X)',score:'87%',i:'🏫',col:'#7b5ff5'},
   ];
@@ -44,7 +43,8 @@ const EducationRoad = () => {
           width: 2px; background: linear-gradient(180deg, var(--a1) 0%, var(--a2) 60%, transparent 100%);
           borderRadius: 2px;
         }
-        .timeline-item { position: relative; marginBottom: 22px; }
+        .timeline-item { position: relative; marginBottom: 48px; }
+        .timeline-item:last-child { marginBottom: 0; }
         .timeline-dot-wrapper {
           position: absolute; left: -32px; top: 20px;
           width: 16px; height: 16px; borderRadius: 50%;
