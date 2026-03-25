@@ -104,7 +104,7 @@ const Hero = () => {
           <div className="avatar-wrapper slide-in d1">
             <div className="avatar-ring">
               <div className="avatar-image-container">
-                <img src="/pfp.jpg" alt="Rajiv Kumar Singh" className="avatar-img" />
+                <img src="/profile picture.jpg" alt="Rajiv Kumar Singh" className="avatar-img" />
               </div>
             </div>
             <div className="availability-badge">
