@@ -218,13 +218,13 @@ const Hero = () => {
           width: 100%;
           height: 100%;
           object-fit: cover;
-          object-position: center top;
+          object-position: center 20%;
           transition: transform .6s cubic-bezier(.22,1,.36,1), filter .4s;
           filter: contrast(1.05) saturate(1.1);
-          transform: scale(1.1);
+          transform: scale(1.02);
         }
         .avatar-ring:hover .avatar-img {
-          transform: scale(1.18);
+          transform: scale(1.08);
           filter: contrast(1.1) saturate(1.15) brightness(1.05);
         }
         .avatar-ring:hover {
